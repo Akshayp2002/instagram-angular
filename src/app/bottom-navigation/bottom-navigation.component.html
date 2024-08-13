@@ -1,0 +1,12 @@
+<div
+    class="fixed bottom-0 z-50 w-full bg-white border-t border-gray-200 dark:bg-gray-700 dark:border-gray-600 block lg:hidden overflow-hidden">
+    <div class="grid h-16 max-w-full grid-cols-5 mx-auto">
+        @for (item of sidebar; track $index) {
+        <button data-tooltip-target="tooltip-home" type="button"
+            class="inline-flex flex-col items-center justify-center p-4 hover:bg-gray-50 dark:hover:bg-gray-800 group">
+            <div [innerHTML]="getSafeIcon(item.icon)"></div>
+            <span class="sr-only">{{item.name}}</span>
+        </button>
+        }
+    </div>
+</div>
