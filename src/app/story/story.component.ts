@@ -59,6 +59,51 @@ export class StoryComponent {
       id: "",
       status: "",
     },
+    {
+      image: "",
+      id: "",
+      status: "active",
+    },
+    {
+      image: "",
+      id: "",
+      status: "active",
+    },
+    {
+      image: "",
+      id: "",
+      status: "active",
+    },
+    {
+      image: "",
+      id: "",
+      status: "viewed",
+    },
+    {
+      image: "",
+      id: "",
+      status: "viewed",
+    },
+    {
+      image: "",
+      id: "",
+      status: "viewed",
+    },
+    {
+      image: "",
+      id: "",
+      status: "",
+    },
+    {
+      image: "",
+      id: "",
+      status: "",
+    },
+    {
+      image: "",
+      id: "",
+      status: "",
+    },
 
   ];
 }
