@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { StoryComponent } from "../story/story.component";
-import { MessageHeadderComponent } from "../message-headder/message-headder.component";
+import { MessageHeadderComponent } from "../core-components/message-headder/message-headder.component";
 
 @Component({
   selector: 'app-chats',

@@ -18,7 +18,9 @@
                 </defs>
             </svg>
             <!-- message -->
-            <a routerLink="/chats" routerLinkActive="router-link-active">
+
+            <a routerLink="/chats" routerLinkActive="router-link-active" type="button"
+                class="relative inline-flex items-center ">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <g clip-path="url(#clip0_1_495)">
                         <path
@@ -34,8 +36,10 @@
                         </clipPath>
                     </defs>
                 </svg>
+                <div
+                    class="absolute inline-flex items-center justify-center w-5 h-5 text-xs font-bold text-white bg-red-500 border-2 border-white rounded-full -top-2 -end-2 dark:border-gray-900">
+                    6</div>
             </a>
-
         </div>
     </div>
 </nav>

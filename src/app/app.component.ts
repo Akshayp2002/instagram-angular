@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { initFlowbite } from 'flowbite';
-import { SidebarComponent } from "./sidebar/sidebar.component";
+import { SidebarComponent } from "./core-components/sidebar/sidebar.component";
 import { HomeComponent } from "./home/home.component";
 import { ProfileComponent } from "./profile/profile.component";
-import { BottomNavigationComponent } from "./bottom-navigation/bottom-navigation.component";
-import { HeaderMobileComponent } from "./header-mobile/header-mobile.component";
+import { BottomNavigationComponent } from "./core-components/bottom-navigation/bottom-navigation.component";
+import { HeaderMobileComponent } from "./core-components/header-mobile/header-mobile.component";
 
 @Component({
   selector: 'app-root',
