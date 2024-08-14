@@ -1,10 +1,10 @@
-<div class="lg:ml-64  w-full lg:w-4/5">
+<div class="lg:ml-64 w-full lg:w-4/5 max-w-6xl justify-center">
     <app-message-headder />
 
     <div class="flex pt-16 w-full">
         <!-- Sidebar (30% width) -->
         <div class="flex-none w-1/3 flex justify-center items-center">
-            <div class="relative rounded-full w-20 m-6">
+            <div class="relative rounded-full w-20 flex flex-col items-center justify-centerm-6">
                 <svg class="w-20 h-20 lg:w-32 lg:h-32 text-gray-200 dark:text-gray-700" aria-hidden="true"
                     xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
                     <path
@@ -16,6 +16,8 @@
                 </button>
             </div>
         </div>
+
+
 
         <div class="flex flex-row lg:flex-col">
             <div class="w-full flex lg:flex-row flex-col hidden lg:flex">
@@ -31,25 +33,33 @@
 
             <!-- Main Content (70% width) -->
             <div class="flex-1 flex gap-4 p-6 items-center">
-
                 <div class="flex flex-col lg:flex-row items-center lg:gap-2">
                     <h4 class="text-lg md:text-xl lg:text-2xl">0</h4>
                     <p class="text-sm md:text-base lg:text-lg">Posts</p>
                 </div>
                 <div class="flex flex-col lg:flex-row items-center lg:gap-2">
-                    <h4 class="text-lg md:text-xl lg:text-2xl">0</h4>
+                    <h4 class="text-lg md:text-xl lg:text-2xl">140</h4>
                     <p class="text-sm md:text-base lg:text-lg">Followers</p>
                 </div>
                 <div class="flex flex-col lg:flex-row items-center lg:gap-2">
-                    <h4 class="text-lg md:text-xl lg:text-2xl">0</h4>
+                    <h4 class="text-lg md:text-xl lg:text-2xl">230</h4>
                     <p class="text-sm md:text-base lg:text-lg">Following</p>
                 </div>
             </div>
-
+            <div class="flex flex-col lg:flex-col p-3 hidden lg:flex">
+                <p class="font-mono">Instagram User</p>
+                <p class="text-sm">Bla Bla</p>
+                <p>....</p>
+            </div>
         </div>
     </div>
+    <div class="flex flex-col lg:flex-col p-3 lg:hidden">
+        <p class="font-mono">Instagram User</p>
+        <p class="text-sm">Bla Bla</p>
+        <p>....</p>
+    </div>
 
-    <div class="w-full flex lg:hidden">
+    <div class="w-full flex lg:hidden px-3">
         <button type="button"
             class="w-1/2 flex items-center justify-center text-gray-900 bg-white hover:bg-gray-100 border border-gray-200 focus:ring-4 focus:outline-none focus:ring-gray-100 font-bold rounded-lg text-sm px-5 py-2.5 dark:focus:ring-gray-600 dark:bg-gray-800 dark:border-gray-700 dark:text-white dark:hover:bg-gray-700 me-2 mb-2">
             Edit Profile
@@ -60,8 +70,8 @@
         </button>
     </div>
 
-    <div class="flex mb-4  pb-4 gap-2 overflow-x-auto pt-4 md:pt-10 lg:ml-64 xl:w-3/5">
-        <div class="relative rounded-full w-20 ">
+    <div class="flex mb-4  pb-4 gap-2 overflow-x-auto pt-4 md:pt-10 lg:ml-64 xl:w-3/5 px-2">
+        <div class="relative rounded-full w-20 flex flex flex-col items-center justify-center">
             <svg class="w-20 h-20 text-gray-200 dark:text-gray-700" aria-hidden="true"
                 xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
                 <path
@@ -70,7 +80,7 @@
             <p>sd</p>
         </div>
 
-        <div class="relative rounded-full w-20 ">
+        <div class="relative rounded-full w-20 flex flex-col items-center justify-center">
             <svg class="w-20 h-20 text-gray-200 dark:text-gray-700" aria-hidden="true"
                 xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
                 <path
@@ -79,7 +89,7 @@
             <p>bla</p>
 
         </div>
-        <div class="relative rounded-full w-20 ">
+        <div class="relative rounded-full w-20 flex flex-col items-center justify-center">
             <svg class="w-20 h-20 text-gray-200 dark:text-gray-700" aria-hidden="true"
                 xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
                 <path
@@ -88,7 +98,7 @@
             <p>me</p>
 
         </div>
-        <div class="relative rounded-full w-20 ">
+        <div class="relative rounded-full w-20 flex flex-col items-center justify-center">
             <svg class="w-20 h-20 text-gray-200 dark:text-gray-700" aria-hidden="true"
                 xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
                 <path
@@ -96,7 +106,7 @@
             </svg>
             <p>helloo</p>
         </div>
-        <div class="relative rounded-full w-20 ">
+        <div class="relative rounded-full w-20 flex flex-col items-center justify-center">
             <svg class="w-20 h-20 text-gray-200 dark:text-gray-700" aria-hidden="true"
                 xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
                 <path
@@ -104,14 +114,15 @@
             </svg>
             <p>chennai</p>
         </div>
-        <div class="relative rounded-full w-20 ">
+        <div class="relative rounded-full w-20 flex flex-col items-center justify-center">
             <svg class="w-20 h-20 text-gray-200 dark:text-gray-700" aria-hidden="true"
                 xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
                 <path
                     d="M10 0a10 10 0 1 0 10 10A10.011 10.011 0 0 0 10 0Zm0 5a3 3 0 1 1 0 6 3 3 0 0 1 0-6Zm0 13a8.949 8.949 0 0 1-4.951-1.488A3.987 3.987 0 0 1 9 13h2a3.987 3.987 0 0 1 3.951 3.512A8.949 8.949 0 0 1 10 18Z" />
             </svg>
+            <p>cms</p>
         </div>
-        <div class="relative rounded-full w-20 ">
+        <div class="relative rounded-full w-20 flex flex-col items-center justify-center">
             <svg class="w-20 h-20 text-gray-200 dark:text-gray-700" aria-hidden="true"
                 xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
                 <path
@@ -120,5 +131,7 @@
             <p>tech</p>
         </div>
     </div>
+
+    <app-user-posts/>
 
 </div>
