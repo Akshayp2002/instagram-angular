@@ -10,7 +10,7 @@ import { Component } from '@angular/core';
 export class StoryComponent {
   items: Array<any> = [
     {
-      image: "",
+      image:"/assets/stories/ai.jpg",
       id: "",
       status: "viewed",
     },

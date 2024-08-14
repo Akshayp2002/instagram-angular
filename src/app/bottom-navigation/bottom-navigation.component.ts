@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
 import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-bottom-navigation',
   standalone: true,
-  imports: [],
+  imports: [RouterLink],
   templateUrl: './bottom-navigation.component.html',
   styleUrl: './bottom-navigation.component.css'
 })
@@ -14,7 +15,6 @@ export class BottomNavigationComponent {
   getSafeIcon(icon: string): SafeHtml {
     return this.sanitizer.bypassSecurityTrustHtml(icon);
   }
-
 
 
   sidebar: Array<any> = [
@@ -47,7 +47,7 @@ export class BottomNavigationComponent {
               </defs>
               </svg>`,
       name: "Search",
-      link: "",
+      link: "/explore",
     },
     {
       id: "",

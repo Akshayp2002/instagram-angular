@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
 import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
+import { RouterLink, RouterLinkActive } from '@angular/router';
 
 @Component({
   selector: 'app-sidebar',
   standalone: true,
-  imports: [],
+  imports: [RouterLink, RouterLinkActive],
   templateUrl: './sidebar.component.html',
   styleUrl: './sidebar.component.css'
 })
@@ -28,7 +29,7 @@ export class SidebarComponent {
               </defs>
               </svg>`,
       name: "Home",
-      link: "",
+      link: "/",
     },
     {
       id: "",
@@ -61,7 +62,7 @@ export class SidebarComponent {
             </defs>
             </svg>`,
       name: "Explore",
-      link: "",
+      link: "/explore",
     },
     {
       id: "",
@@ -96,7 +97,7 @@ export class SidebarComponent {
             </defs>
             </svg>`,
       name: "Message",
-      link: "",
+      link: "chats",
     },
     {
       id: "",

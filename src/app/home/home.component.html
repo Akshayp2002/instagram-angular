@@ -1,4 +1,12 @@
 <app-header-mobile />
 <app-story />
-<app-posts />
-<app-bottom-navigation />
+
+
+<ng-container *ngIf="currentRoute === '';">
+    <app-posts></app-posts>
+</ng-container>
+
+<ng-container *ngIf="currentRoute === '/explore';">
+    <app-chats></app-chats>
+</ng-container>
+
