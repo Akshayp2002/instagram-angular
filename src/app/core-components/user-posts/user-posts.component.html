@@ -62,34 +62,11 @@
         aria-labelledby="profile-tab">
         <div class="grid grid-cols-3 md:grid-cols-4 gap-1">
 
+            @for (item of posts; track $index) {
             <div>
-                <img class="h-auto max-w-full" src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image.jpg"
-                    alt="">
+                <img class="h-auto max-w-full" [src]="item.image" alt="">
             </div>
-            <div>
-                <img class="h-auto max-w-full" src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-1.jpg"
-                    alt="">
-            </div>
-            <div>
-                <img class="h-auto max-w-full" src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-2.jpg"
-                    alt="">
-            </div>
-            <div>
-                <img class="h-auto max-w-full" src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-3.jpg"
-                    alt="">
-            </div>
-            <div>
-                <img class="h-auto max-w-full" src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-4.jpg"
-                    alt="">
-            </div>
-            <div>
-                <img class="h-auto max-w-full" src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-5.jpg"
-                    alt="">
-            </div>
-            <div>
-                <img class="h-auto max-w-full" src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-6.jpg"
-                    alt="">
-            </div>
+            }
 
         </div>
     </div>
@@ -97,36 +74,22 @@
         aria-labelledby="dashboard-tab">
         <!--  -->
         <div class="grid grid-cols-3 md:grid-cols-4 gap-1">
+            @for (item of reels; track $index) {
             <div>
-                <img class="h-auto max-w-full" src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-7.jpg"
-                    alt="">
+                <img class="h-auto max-w-full" [src]="item.image" alt="">
             </div>
-            <div>
-                <img class="h-auto max-w-full" src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-8.jpg"
-                    alt="">
-            </div>
-            <div>
-                <img class="h-auto max-w-full" src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-9.jpg"
-                    alt="">
-            </div>
-            <div>
-                <img class="h-auto max-w-full" src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-10.jpg"
-                    alt="">
-            </div>
-            <div>
-                <img class="h-auto max-w-full" src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-11.jpg"
-                    alt="">
-            </div>
+            }
         </div>
     </div>
     <div class="hidden p-2 rounded-lg bg-gray-50 dark:bg-gray-800" id="styled-settings" role="tabpanel"
         aria-labelledby="settings-tab">
         <!--  -->
         <div class="grid grid-cols-3 md:grid-cols-4 gap-1">
+            @for (item of tagged; track $index) {
             <div>
-                <img class="h-auto max-w-full" src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-7.jpg"
-                    alt="">
+                <img class="h-auto max-w-full" [src]="item.image" alt="">
             </div>
+            }
         </div>
     </div>
 </div>

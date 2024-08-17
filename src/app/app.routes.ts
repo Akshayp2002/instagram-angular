@@ -1,3 +1,4 @@
+import { NotificationComponent } from './notification/notification.component';
 import { Routes } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { ProfileComponent } from './profile/profile.component';
@@ -20,5 +21,9 @@ export const routes: Routes = [
     {
         path: 'explore',
         component: ExploreComponent
+    },
+    {
+        path: 'notification',
+        component: NotificationComponent
     },
 ];

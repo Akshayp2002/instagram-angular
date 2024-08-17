@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-import { RouterEvent, RouterLink } from '@angular/router';
+import { Component, Input } from '@angular/core';
+import {  RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-message-headder',
@@ -9,5 +9,7 @@ import { RouterEvent, RouterLink } from '@angular/router';
   styleUrl: './message-headder.component.css'
 })
 export class MessageHeadderComponent {
+
+  @Input({ required: true }) title = '';
 
 }

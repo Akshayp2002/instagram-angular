@@ -1,0 +1,32 @@
+<div class="lg:ml-64  w-full lg:w-4/5">
+    <app-message-headder [title]="'Notification'" />
+    <ul class="max-w-lg divide-y divide-gray-200 dark:divide-gray-700 p-2 py-16">
+        @for (item of likes; track $index) {
+        <li class="pb-4 sm:pb-6">
+            <div class="flex items-center space-x-4 rtl:space-x-reverse">
+                <div class="flex-shrink-0">
+                    <img class="w-14 h-14 rounded-full" [src]="item.avatar" alt="Neil image">
+                </div>
+                <div class="flex-1 min-w-0">
+                    <p class="text-sm font-medium text-gray-900 truncate dark:text-white">
+                        {{item.user}}
+                    </p>
+                    <p class="text-sm text-gray-500 truncate dark:text-gray-400">
+                        {{item.message}}
+                    </p>
+                    <p class="text-xs text-gray-500 truncate dark:text-gray-400">
+                        {{item.timestamp}}
+                    </p>
+                </div>
+                @if (item.follow_status === true) {
+                <button type="button"
+                    class="px-3 py-2 text-xs font-medium text-center inline-flex items-center text-white bg-blue-600 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Follow</button>
+                }
+            </div>
+        </li>
+        }
+
+
+    </ul>
+
+</div>
