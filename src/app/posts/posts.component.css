@@ -1,0 +1,25 @@
+@keyframes heart-animation {
+    0% {
+        transform: scale(0.5);
+        opacity: 0;
+    }
+
+    30% {
+        transform: scale(1.5);
+        opacity: 0.8;
+    }
+
+    60% {
+        transform: scale(1.2);
+        opacity: 1;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 0;
+    }
+}
+
+.animate-heart svg {
+    animation: heart-animation 1s ease-in-out;
+}

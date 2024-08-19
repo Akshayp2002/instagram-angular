@@ -1,15 +1,18 @@
 import { Component } from '@angular/core';
 import { SuggestionsComponent } from "../suggestions/suggestions.component";
 import { StoryComponent } from "../story/story.component";
+import { NgClass, NgIf } from '@angular/common';
 
 @Component({
   selector: 'app-posts',
   standalone: true,
-  imports: [SuggestionsComponent, StoryComponent],
+  imports: [SuggestionsComponent, StoryComponent,NgClass,NgIf],
   templateUrl: './posts.component.html',
   styleUrl: './posts.component.css'
 })
 export class PostsComponent {
+
+
 
   posts = [
     {
@@ -22,7 +25,9 @@ export class PostsComponent {
         { username: 'emma_watson', comment: 'Great shot!' },
         { username: 'michael_smith', comment: 'Where was this taken?' }
       ],
-      postImage: 'https://images.unsplash.com/photo-1567306226416-28f0efdc88ce?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80' // Natural landscape
+      postImage: 'https://images.unsplash.com/photo-1567306226416-28f0efdc88ce?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80',// Natural landscape
+      isLiked: false,
+      showHeart: false // Add like status here
     },
     {
       user: 'sarah_123',
@@ -34,7 +39,9 @@ export class PostsComponent {
         { username: 'lucas_miller', comment: 'Amazing colors!' },
         { username: 'olivia_jones', comment: 'I love this place!' }
       ],
-      postImage: 'https://images.pexels.com/photos/189349/pexels-photo-189349.jpeg?auto=compress&cs=tinysrgb&w=800' // City skyline
+      postImage: 'https://images.pexels.com/photos/189349/pexels-photo-189349.jpeg?auto=compress&cs=tinysrgb&w=800', // City skyline
+      isLiked: false,
+      showHeart: false // Add like status here
     },
     {
       user: 'emma_watson',
@@ -46,7 +53,9 @@ export class PostsComponent {
         { username: 'aiden_brown', comment: 'This is stunning!' },
         { username: 'mia_davis', comment: 'I need to visit here.' }
       ],
-      postImage: 'https://images.pexels.com/photos/1919243/pexels-photo-1919243.jpeg?auto=compress&cs=tinysrgb&w=800'
+      postImage: 'https://images.pexels.com/photos/1919243/pexels-photo-1919243.jpeg?auto=compress&cs=tinysrgb&w=800',
+      isLiked: false,
+      showHeart: false // Add like status here
     },
     {
       user: 'michael_smith',
@@ -58,7 +67,9 @@ export class PostsComponent {
         { username: 'john_doe', comment: 'Awesome capture!' },
         { username: 'sarah_123', comment: 'Looks peaceful.' }
       ],
-      postImage: 'https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=800' // Coffee on a table
+      postImage: 'https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=800', // Coffee on a table
+      isLiked: false,
+      showHeart: false // Add like status here
     },
     {
       user: 'lucas_miller',
@@ -70,7 +81,9 @@ export class PostsComponent {
         { username: 'emma_watson', comment: 'So inspiring!' },
         { username: 'michael_smith', comment: 'What a view!' }
       ],
-      postImage: 'https://images.pexels.com/photos/261187/pexels-photo-261187.jpeg?auto=compress&cs=tinysrgb&w=800' // Beach sunset
+      postImage: 'https://images.pexels.com/photos/261187/pexels-photo-261187.jpeg?auto=compress&cs=tinysrgb&w=800',// Beach sunset
+      isLiked: false,
+      showHeart: false // Add like status here
     },
     {
       user: 'olivia_jones',
@@ -82,7 +95,9 @@ export class PostsComponent {
         { username: 'lucas_miller', comment: 'This is so cool!' },
         { username: 'aiden_brown', comment: 'I love this shot!' }
       ],
-      postImage: 'https://images.pexels.com/photos/462146/pexels-photo-462146.jpeg?auto=compress&cs=tinysrgb&w=800' // Mountain range
+      postImage: 'https://images.pexels.com/photos/462146/pexels-photo-462146.jpeg?auto=compress&cs=tinysrgb&w=800',// Mountain range
+      isLiked: false,
+      showHeart: false // Add like status here
     },
     {
       user: 'aiden_brown',
@@ -94,7 +109,9 @@ export class PostsComponent {
         { username: 'mia_davis', comment: 'This is incredible!' },
         { username: 'john_doe', comment: 'I want to go here!' }
       ],
-      postImage: 'https://images.pexels.com/photos/34950/pexels-photo.jpg?auto=compress&cs=tinysrgb&w=800' // Scenic forest
+      postImage: 'https://images.pexels.com/photos/34950/pexels-photo.jpg?auto=compress&cs=tinysrgb&w=800',// Scenic forest
+      isLiked: false,
+      showHeart: false // Add like status here
     },
     {
       user: 'mia_davis',
@@ -106,7 +123,9 @@ export class PostsComponent {
         { username: 'olivia_jones', comment: 'Breathtaking!' },
         { username: 'sarah_123', comment: 'This is perfect!' }
       ],
-      postImage: 'https://images.pexels.com/photos/276528/pexels-photo-276528.jpeg?auto=compress&cs=tinysrgb&w=800' // Flower with book
+      postImage: 'https://images.pexels.com/photos/276528/pexels-photo-276528.jpeg?auto=compress&cs=tinysrgb&w=800', // Flower with book
+      isLiked: false,
+      showHeart: false // Add like status here
     },
     {
       user: 'john_doe',
@@ -118,7 +137,9 @@ export class PostsComponent {
         { username: 'emma_watson', comment: 'Love the vibe here!' },
         { username: 'michael_smith', comment: 'This is so nice!' }
       ],
-      postImage: 'https://images.pexels.com/photos/1851174/pexels-photo-1851174.jpeg?auto=compress&cs=tinysrgb&w=800' // Flower garden
+      postImage: 'https://images.pexels.com/photos/1851174/pexels-photo-1851174.jpeg?auto=compress&cs=tinysrgb&w=800',// Flower garden
+      isLiked: false,
+      showHeart: false // Add like status here
     },
     {
       user: 'sarah_123',
@@ -130,7 +151,9 @@ export class PostsComponent {
         { username: 'lucas_miller', comment: 'Such a cool place!' },
         { username: 'olivia_jones', comment: 'This is awesome!' }
       ],
-      postImage: 'https://images.pexels.com/photos/3079408/pexels-photo-3079408.jpeg?auto=compress&cs=tinysrgb&w=800' // Cozy living room
+      postImage: 'https://images.pexels.com/photos/3079408/pexels-photo-3079408.jpeg?auto=compress&cs=tinysrgb&w=800', // Cozy living room
+      isLiked: false,
+      showHeart: false // Add like status here
     },
     {
       user: 'alex_wilson',
@@ -142,7 +165,9 @@ export class PostsComponent {
         { username: 'riley_king', comment: 'Amazing shot!' },
         { username: 'david_clark', comment: 'Love this view!' }
       ],
-      postImage: 'https://images.pexels.com/photos/1135904/pexels-photo-1135904.jpeg?auto=compress&cs=tinysrgb&w=800' // Mountain landscape
+      postImage: 'https://images.pexels.com/photos/1135904/pexels-photo-1135904.jpeg?auto=compress&cs=tinysrgb&w=800', // Mountain landscape
+      isLiked: false,
+      showHeart: false // Add like status here
     },
     {
       user: 'lily_james',
@@ -154,7 +179,9 @@ export class PostsComponent {
         { username: 'natalie_martin', comment: 'Beautiful picture!' },
         { username: 'tyler_lee', comment: 'So inspiring!' }
       ],
-      postImage: 'https://images.pexels.com/photos/3075641/pexels-photo-3075641.jpeg?auto=compress&cs=tinysrgb&w=800' // Cozy café
+      postImage: 'https://images.pexels.com/photos/3075641/pexels-photo-3075641.jpeg?auto=compress&cs=tinysrgb&w=800',// Cozy café
+      isLiked: false,
+      showHeart: false // Add like status here
     },
     {
       user: 'jack_morris',
@@ -166,7 +193,9 @@ export class PostsComponent {
         { username: 'jasmine_king', comment: 'Incredible work!' },
         { username: 'oscar_nelson', comment: 'Love the composition!' }
       ],
-      postImage: 'https://images.pexels.com/photos/1679658/pexels-photo-1679658.jpeg?auto=compress&cs=tinysrgb&w=800' // Scenic road
+      postImage: 'https://images.pexels.com/photos/1679658/pexels-photo-1679658.jpeg?auto=compress&cs=tinysrgb&w=800',// Scenic road
+      isLiked: false,
+      showHeart: false // Add like status here
     },
     {
       user: 'emily_brown',
@@ -178,7 +207,9 @@ export class PostsComponent {
         { username: 'sophie_adams', comment: 'Fantastic view!' },
         { username: 'william_rodgers', comment: 'So beautiful!' }
       ],
-      postImage: 'https://images.pexels.com/photos/3811121/pexels-photo-3811121.jpeg?auto=compress&cs=tinysrgb&w=800' // Beautiful beach
+      postImage: 'https://images.pexels.com/photos/3811121/pexels-photo-3811121.jpeg?auto=compress&cs=tinysrgb&w=800', // Beautiful beach
+      isLiked: false,
+      showHeart: false // Add like status here
     },
     {
       user: 'noah_johnson',
@@ -190,7 +221,9 @@ export class PostsComponent {
         { username: 'amelia_white', comment: 'Great photo!' },
         { username: 'ethan_smith', comment: 'This is awesome!' }
       ],
-      postImage: 'https://images.pexels.com/photos/3749041/pexels-photo-3749041.jpeg?auto=compress&cs=tinysrgb&w=800' // Modern workspace
+      postImage: 'https://images.pexels.com/photos/3749041/pexels-photo-3749041.jpeg?auto=compress&cs=tinysrgb&w=800',// Modern workspace
+      isLiked: false,
+      showHeart: false // Add like status here
     },
     {
       user: 'ava_miller',
@@ -202,7 +235,9 @@ export class PostsComponent {
         { username: 'chloe_anderson', comment: 'Wonderful picture!' },
         { username: 'daniel_brown', comment: 'Beautiful!' }
       ],
-      postImage: 'https://images.pexels.com/photos/2573606/pexels-photo-2573606.jpeg?auto=compress&cs=tinysrgb&w=800' // Cozy living room
+      postImage: 'https://images.pexels.com/photos/2573606/pexels-photo-2573606.jpeg?auto=compress&cs=tinysrgb&w=800',// Cozy living room
+      isLiked: false,
+      showHeart: false // Add like status here
     },
     {
       user: 'oliver_williams',
@@ -214,7 +249,9 @@ export class PostsComponent {
         { username: 'mia_jones', comment: 'Incredible details!' },
         { username: 'liam_thomas', comment: 'Great work!' }
       ],
-      postImage: 'https://images.pexels.com/photos/1834394/pexels-photo-1834394.jpeg?auto=compress&cs=tinysrgb&w=800' // Scenic lake
+      postImage: 'https://images.pexels.com/photos/1834394/pexels-photo-1834394.jpeg?auto=compress&cs=tinysrgb&w=800', // Scenic lake
+      isLiked: false,
+      showHeart: false // Add like status here
     },
     {
       user: 'ella_garcia',
@@ -226,7 +263,9 @@ export class PostsComponent {
         { username: 'zara_martin', comment: 'Fantastic image!' },
         { username: 'harry_johnson', comment: 'Love this!' }
       ],
-      postImage: 'https://images.pexels.com/photos/3225513/pexels-photo-3225513.jpeg?auto=compress&cs=tinysrgb&w=800' // Stunning waterfall
+      postImage: 'https://images.pexels.com/photos/3225513/pexels-photo-3225513.jpeg?auto=compress&cs=tinysrgb&w=800', // Stunning waterfall
+      isLiked: false,
+      showHeart: false // Add like status here
     },
     {
       user: 'charlie_roberts',
@@ -238,7 +277,9 @@ export class PostsComponent {
         { username: 'sophie_white', comment: 'Amazing work!' },
         { username: 'james_smith', comment: 'Incredible view!' }
       ],
-      postImage: 'https://images.pexels.com/photos/3893259/pexels-photo-3893259.jpeg?auto=compress&cs=tinysrgb&w=800' // Beautiful garden
+      postImage: 'https://images.pexels.com/photos/3893259/pexels-photo-3893259.jpeg?auto=compress&cs=tinysrgb&w=800', // Beautiful garden
+      isLiked: false,
+      showHeart: false // Add like status here
     },
     {
       user: 'sofia_davis',
@@ -250,7 +291,9 @@ export class PostsComponent {
         { username: 'ella_king', comment: 'Great photo!' },
         { username: 'ben_martin', comment: 'Love the colors!' }
       ],
-      postImage: 'https://images.pexels.com/photos/2820769/pexels-photo-2820769.jpeg?auto=compress&cs=tinysrgb&w=800' // Cozy café
+      postImage: 'https://images.pexels.com/photos/2820769/pexels-photo-2820769.jpeg?auto=compress&cs=tinysrgb&w=800', // Cozy café
+      isLiked: false,
+      showHeart: false // Add like status here
     },
     {
       user: 'jake_martin',
@@ -262,7 +305,9 @@ export class PostsComponent {
         { username: 'lucas_anderson', comment: 'Fantastic scenery!' },
         { username: 'harper_clark', comment: 'Amazing!' }
       ],
-      postImage: 'https://images.pexels.com/photos/1570676/pexels-photo-1570676.jpeg?auto=compress&cs=tinysrgb&w=800' // Scenic mountain
+      postImage: 'https://images.pexels.com/photos/1570676/pexels-photo-1570676.jpeg?auto=compress&cs=tinysrgb&w=800', // Scenic mountain
+      isLiked: false,
+      showHeart: false // Add like status here
     },
     {
       user: 'natalie_adams',
@@ -274,7 +319,9 @@ export class PostsComponent {
         { username: 'grace_james', comment: 'Wonderful place!' },
         { username: 'jason_morris', comment: 'So beautiful!' }
       ],
-      postImage: 'https://images.pexels.com/photos/2204531/pexels-photo-2204531.jpeg?auto=compress&cs=tinysrgb&w=800' // Beautiful lake
+      postImage: 'https://images.pexels.com/photos/2204531/pexels-photo-2204531.jpeg?auto=compress&cs=tinysrgb&w=800', // Beautiful lake
+      isLiked: false,
+      showHeart: false // Add like status here
     },
     {
       user: 'mason_johnson',
@@ -286,9 +333,23 @@ export class PostsComponent {
         { username: 'olivia_wilson', comment: 'Great photo!' },
         { username: 'jack_thomas', comment: 'Love this view!' }
       ],
-      postImage: 'https://images.pexels.com/photos/1679658/pexels-photo-1679658.jpeg?auto=compress&cs=tinysrgb&w=800' // Modern workspace
+      postImage: 'https://images.pexels.com/photos/1679658/pexels-photo-1679658.jpeg?auto=compress&cs=tinysrgb&w=800',// Modern workspace
     }
   ];
 
+  triggerHeartAnimation(index: number): void {
+    this.toggleLike(index); // Toggle the like status
+    this.posts[index].showHeart = true;
 
+    // Remove the heart after the animation ends
+    setTimeout(() => {
+      this.posts[index].showHeart = false;
+    }, 1000); // Match this duration with the animation duration (1 second)
+  }
+
+
+  toggleLike(index: number): void {
+    this.posts[index].isLiked = !this.posts[index].isLiked;
+    // Additional logic for like functionality
+  }
 }
