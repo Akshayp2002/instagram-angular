@@ -16,7 +16,7 @@
             </div>
             <div class="relative flex justify-center mb-4 bg-gray-100 dark:bg-gray-700">
                 <img [src]="item.postImage" class="h-96 object-cover" alt="" (dblclick)="triggerHeartAnimation($index)">
-                <div *ngIf="item.showHeart" class="absolute inset-0 flex justify-center items-center">
+                <div *ngIf="item.showHeart" class="absolute inset-0 flex justify-center items-center animate-heart ">
                     <svg fill="#ffffffb0" width="85px" height="85px" viewBox="0 -2.5 32 32"
                         xmlns="http://www.w3.org/2000/svg">
                         <g id="SVGRepo_iconCarrier">

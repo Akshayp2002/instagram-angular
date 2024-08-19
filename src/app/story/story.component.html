@@ -1,11 +1,21 @@
-<div class="flex mb-4  pb-4 gap-2 overflow-x-auto pt-16 lg:ml-64 xl:w-3/5">
+<div class="flex mb-4  pb-5 gap-2 overflow-x-auto pt-16 lg:ml-64 xl:w-3/5">
     <div class="flex-shrink-0">
-        <img class="w-20 h-20 rounded-full" src="/assets/stories/ai.jpg" alt="Neil image">
+        <img class="w-20 h-20 rounded-full p-1 bg-gradient-to-r from-[#f9ce34] via-[#ee2a7b] to-[#6228d7]" src="/assets/stories/ai.jpg" alt="Neil image">
     </div>
     @for (item of items; track $index) {
 
     <div class="flex-shrink-0">
-        <img class="w-20 h-20 rounded-full" [src]="item.image" alt="Neil image">
+        @if (item.status== "viewed") {
+        <img class="w-20 h-20 rounded-full p-1 bg-gray-400"
+            [src]="item.image" alt="Neil image">
+
+        }@else if(item.favorite == true) {
+        <img class="w-20 h-20 rounded-full p-1 bg-[#33cc15]"
+            [src]="item.image" alt="Neil image">
+        }@else {
+        <img class="w-20 h-20 rounded-full p-1 bg-gradient-to-r from-[#f9ce34] via-[#ee2a7b] to-[#6228d7]"
+            [src]="item.image" alt="Neil image">
+        }
     </div>
     }
 </div>

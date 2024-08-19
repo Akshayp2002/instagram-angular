@@ -6,7 +6,7 @@ import { NgClass, NgIf } from '@angular/common';
 @Component({
   selector: 'app-posts',
   standalone: true,
-  imports: [SuggestionsComponent, StoryComponent,NgClass,NgIf],
+  imports: [SuggestionsComponent, StoryComponent, NgClass, NgIf],
   templateUrl: './posts.component.html',
   styleUrl: './posts.component.css'
 })
@@ -26,7 +26,7 @@ export class PostsComponent {
         { username: 'michael_smith', comment: 'Where was this taken?' }
       ],
       postImage: 'https://images.unsplash.com/photo-1567306226416-28f0efdc88ce?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80',// Natural landscape
-      isLiked: false,
+      isLiked: true,
       showHeart: false // Add like status here
     },
     {
@@ -333,7 +333,9 @@ export class PostsComponent {
         { username: 'olivia_wilson', comment: 'Great photo!' },
         { username: 'jack_thomas', comment: 'Love this view!' }
       ],
-      postImage: 'https://images.pexels.com/photos/1679658/pexels-photo-1679658.jpeg?auto=compress&cs=tinysrgb&w=800',// Modern workspace
+      postImage: 'https://images.pexels.com/photos/1679658/pexels-photo-1679658.jpeg?auto=compress&cs=tinysrgb&w=800',
+      isLiked: false,
+      showHeart: false // Add like status here// Modern workspace
     }
   ];
 
@@ -346,7 +348,7 @@ export class PostsComponent {
       this.posts[index].showHeart = false;
     }, 1000); // Match this duration with the animation duration (1 second)
   }
-
+  
 
   toggleLike(index: number): void {
     this.posts[index].isLiked = !this.posts[index].isLiked;
